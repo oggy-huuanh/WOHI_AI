@@ -1,0 +1,15 @@
+h1 {
+    color: blue;
+    font-family: sans-serif;
+    font-size: 300%;
+}
+#gameCanvas{
+
+    position: absolute;
+    display: flex;
+}
+#gameover{
+    display: none;
+    position: absolute;
+
+}
