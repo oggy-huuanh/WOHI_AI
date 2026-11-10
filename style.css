@@ -1,16 +1,39 @@
-h1 {
-    color: blue;
-    font-family: sans-serif;
+#snakeText{
+    font-family: "Comic Sans MS";
     font-size: 300%;
+    text-align: center;
+    color: green;
 }
-
-#gameCanvas{
-
-    position: absolute;
+body{
+    background-color: lightblue;
+}
+#gameContainer{
+    padding-top: 200px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#gameContainer div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+#info{
+    font-size: 30px;
+    font-family: sans-serif;
+}
+#highScore{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+#restart{
+    font-size: 30px;
 }
 #gameover{
+    background-color: yellow;
+    color: red;
     display: none;
-    position: absolute;
-
+    text-align: center;
+    font-family: Verdana, sans-serif;
 }
