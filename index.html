@@ -15,15 +15,19 @@
 </head>
 <body>
 
-    <h1>Snake</h1>
-    <canvas id="gameCanvas" width="400"
-            height="400"></canvas>
-    <p id="info"></p>
-    <div id = "gameover">
-
-    <h1>GAME OVER :( !!!!</h1>
-        <button id = "restart">Restart</button>
+    <div id = "gameContainer">
+        <h1>Snake</h1>
+        <canvas id = gameCanvas  width="400"
+                 height="400"></canvas>
+        <p id="info"></p>
+        <div id = "gameover">
+            <h1>GAME OVER :( !!!!</h1>
+            <button id = "restart">Restart</button>
+        </div>
     </div>
+
+
+
 
 
     <script>
@@ -102,6 +106,12 @@
             if ((snake[0].x >= tileCount || snake[0].y >= tileCount) || (snake[0].x < 0 || snake[0].y < 0)){
                 snake.length = 0;
                 lose = true;
+            }
+            for (let i = 1; i < snake.length; i++){
+                if (snake[0].x === snake[i].x && snake[0].y === snake[i].y){
+                    snake.length = 0;
+                    lose = true;
+                }
             }
         }
 
